@@ -8,7 +8,7 @@ export class HoverDirective {
   constructor(private el: ElementRef) {}
 
   @HostListener('mouseenter') onMouseEnter() {
-    this.hover('black', 'white');
+    this.hover('gray', 'white');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
