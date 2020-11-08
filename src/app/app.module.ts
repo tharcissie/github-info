@@ -14,6 +14,7 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { FormsModule } from '@angular/forms';
 import { HoverDirective } from './hover.directive';
 import { DatePipe } from './date.pipe';
+import { DatePipePipe } from './date-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DatePipe } from './date.pipe';
     UserComponent,
     ErrorComponent,
     HoverDirective,
-    DatePipe
+    DatePipe,
+    DatePipePipe
   ],
   imports: [
     BrowserModule,
