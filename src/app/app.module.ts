@@ -8,12 +8,10 @@ import { RepoComponent } from './repo/repo.component';
 import { FindFormComponent } from './find-form/find-form.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorComponent } from './error/error.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { FormsModule } from '@angular/forms';
 import { HoverDirective } from './hover.directive';
-import { DatePipe } from './date.pipe';
 import { DatePipePipe } from './date-pipe.pipe';
 
 @NgModule({
@@ -23,9 +21,7 @@ import { DatePipePipe } from './date-pipe.pipe';
     RepoComponent,
     FindFormComponent,
     UserComponent,
-    ErrorComponent,
     HoverDirective,
-    DatePipe,
     DatePipePipe
   ],
   imports: [

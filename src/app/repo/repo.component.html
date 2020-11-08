@@ -1,34 +1,36 @@
-<div class="container-fluid">
-    <app-find-form (searchOutput)= "repoSearch($event)"></app-find-form>
-      <div class="container">
-          <div class="container allrepos">
-              <div class="card"  *ngFor="let repository of repo" style="width: 22rem;" class="repo">
-                <div class="card-body">
-                  <h5 class="card-title">Repo Name: &nbsp;{{repository.name}} </h5>
-                  <div class="card-text">
-                    <hr>
-                    <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}} 
-                    </div>
-                    <hr>
-                    <div class="card-subtitle mb-2">
-                        <span class="top">Language: </span> {{repository.language}}
-                    </div>
-                    <div class="card-subtitle mb-2"><span class="top">Created On:</span> &nbsp;{{repository.created_at | date}}</div>
-                  </div>
-                  </div>
-                  <div class="card-footer">
-                    <div class="btn-group" role="group" aria-label="Third group">
-                      <button class="btn btn-sm btn-info"><i class="fa fa-eye" style="font-size:16px"></i> {{repository.watchers_count}}</button>
-                    </div>
-                    <div class="btn-group" role="group" aria-label="Third group">
-                      <button class="btn btn-sm btn-outline-danger"><i class="fa fa-code-fork" style="font-size:16px"></i> {{repository.forks}}</button>
-                    </div>
-                    <div class="btn-group" role="group" aria-label="Third group">
-                      <button class="btn btn-sm btn-success" id="visit"><a href="{{repository.html_url}}" class="card-link">Visit &nbsp; <i class="fa fa-arrow-circle-right" style="font-size:16px"></i></a> </button> 
-                    </div>
-                  </div>
-              </div>
-            </div>
-      </div>
+<div class="container-fluid mt-5">
+  <div class="justify-content-center">
+    <app-find-form (searchOutput)="repoSearch($event)"></app-find-form>
   </div>
-  
+  <div class="container mt-5">
+    <div class="container justify-content-center row">
+      <div class="card col-3 m-2" *ngFor="let repository of repo" style="width: 22rem;">
+        <div class="card-body">
+          <h5 class="card-title">Repo Name: &nbsp;{{repository.name}} </h5>
+          <div class="card-text">
+            <hr>
+            <div class="desc"><span class="top">Description:</span> &nbsp;{{repository.description}}
+            </div>
+            <hr>
+            <div class="card-subtitle mb-2">
+              <span class="top">Language: </span> {{repository.language}}
+            </div>
+            <div class="card-subtitle mb-2"><span class="top">Created On:</span> &nbsp;{{repository.created_at | date}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button class="btn btn-sm btn-info"><span>views&nbsp;{{repository.watchers_count}}</span></button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button class="btn btn-sm btn-danger"><span>forks&nbsp;{{repository.forks}}</span></button>
+          </div>
+          <div class="btn-group" role="group" aria-label="Third group">
+            <button class="btn btn-sm btn-success"><a href="{{repository.html_url}}" class="card-link">View</a> </button> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
