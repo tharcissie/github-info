@@ -6,7 +6,7 @@
     <div class="container justify-content-center row">
       <div class="card col-3 m-2" *ngFor="let repository of repo" style="width: 22rem;">
         <div class="card-body">
-          <h5 class="card-title">Repo Name: &nbsp;{{repository.name}} </h5>
+          <h5 class="card-title">{{repository.name}} </h5>
           <div class="card-text">
             <hr>
             <div><span>Description:</span> &nbsp;{{repository.description}}
