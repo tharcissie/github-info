@@ -39,7 +39,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 If anyone need support concerning the project or anything related, just reach out to tharcissieidufashe@gmail.com
 
 ## Link to live site
-https://tharcissie.github.io/Quote-App/
+tharcissie.github.io/github-info/
 
 ### License
 
@@ -60,5 +60,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-Copyright (c) 2020 Quote-App
+Copyright (c) 2020 github-info
 
