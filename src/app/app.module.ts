@@ -8,6 +8,7 @@ import { RepoComponent } from './repo/repo.component';
 import { FindFormComponent } from './find-form/find-form.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     RepoComponent,
     FindFormComponent,
-    UserComponent
+    UserComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
