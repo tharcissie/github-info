@@ -12,6 +12,8 @@ import { ErrorComponent } from './error/error.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { FormsModule } from '@angular/forms';
+import { HoverDirective } from './hover.directive';
+import { DatePipe } from './date.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule } from '@angular/forms';
     RepoComponent,
     FindFormComponent,
     UserComponent,
-    ErrorComponent
+    ErrorComponent,
+    HoverDirective,
+    DatePipe
   ],
   imports: [
     BrowserModule,
