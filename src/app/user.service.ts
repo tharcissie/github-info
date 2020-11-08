@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class UserService {
   findUser: User;
   Repos: Repo;
-
+  
   constructor(private http: HttpClient) { 
     this.findUser = new User("","","","",0,0,0,"",new Date);
     this.Repos = new Repo("","","",new Date,0,0,"");

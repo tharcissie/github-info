@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <ng-progress></ng-progress>
   <div class="overlay">
-      <app-search-form (searchOutput)= "searchs($event)"></app-search-form>
+      <app-find-form (searchOutput)= "searchs($event)"></app-find-form>
       <div class="container content">
         <div class="row">
           <div class="col-sm-4" id="imgcard">
@@ -16,7 +16,7 @@
             </div>
             </div>
           <div class="col-sm-7 user">
-            <div class="card" appHighlight>
+            <div class="card">
               <div class="card-body">
                 <h4>Git-Search: {{user.login}}</h4>
                 <hr>
@@ -26,7 +26,7 @@
                 <hr>
                 <p> <i class="fa fa-users"style="font-size:18px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span class="follow">{{user.followers}}</span></p>
                 <hr>
-                <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; <span class="datejoined">{{user.created_at | datePipe}}</span></p>
+                <p><i class="fa fa-clock-o" style="font-size:18px"></i>&nbsp;&nbsp; Joined:&nbsp;&nbsp; <span class="datejoined">{{user.created_at }}</span></p>
                 <hr>
               </div>
             </div>  
@@ -34,14 +34,14 @@
         </div> 
       </div>
       <div id="click" class="text-center">
-          <a href="#reps"><img src="https://raw.githubusercontent.com/Owiti-Charles/Git-Search/master/src/assets/mouse_click.png" alt=" mouse_click" id="mouse-click"></a> 
+          <a href="#reps"><img src="https://raw.githubusercontent.com/tharcissie/Git-Search/master/src/assets/mouse_click.png" alt=" mouse_click" id="mouse-click"></a> 
       </div>
       
       <div class="text-center repos" id="reps">
           <h2>Repositories</h2>
         </div>
       <div class="container allrepos">
-        <div class="card" appHighlight *ngFor="let repository of repo" style="width: 22rem;" class="repo">
+        <div class="card"  *ngFor="let repository of repo" style="width: 22rem;" class="repo">
           <div class="card-body" >
             <h5 class="card-title"><span class="top">Repo Name:</span> &nbsp;{{repository.name}} </h5>
             <div class="card-text">
@@ -52,7 +52,7 @@
               <div class="card-subtitle mb-2">
                   <span class="top">Language: </span> {{repository.language}}
               </div>
-              <div class="card-subtitle mb-2"><span class="top">Created:&nbsp; <span id="created">{{repository.created_at | datePipe}}</span> &nbsp;  On:</span> &nbsp;{{repository.created_at | date}}
+              <div class="card-subtitle mb-2"><span class="top">Created:&nbsp; <span id="created">{{repository.created_at}}</span> &nbsp;  On:</span> &nbsp;{{repository.created_at | date}}
               </div>
             </div>
             </div>

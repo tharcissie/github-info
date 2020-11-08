@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './error/error.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     HttpClientModule,
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
