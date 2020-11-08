@@ -9,6 +9,8 @@ import { FindFormComponent } from './find-form/find-form.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './error/error.component';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { ErrorComponent } from './error/error.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
