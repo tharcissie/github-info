@@ -12,9 +12,31 @@ import { UserService } from '../user.service';
 export class UserComponent implements OnInit {
   user: User;
   repo: Repo;
-  constructor(public myService: UserService, private repoService: UserService) { }
+  constructor(public userService: UserService, private repoService: UserService) { }
+
+  searchs(searchName) {
+    this.userService.searchUSer(searchName).then(
+      (success)=>{
+        this.user = this.userService.findUser;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    );
+    this.repoService.getRepo(searchName).then(
+      (results)=>{
+        this.repo =this.repoService.Repos
+        console.log(this.repo);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    );
+}
+
 
   ngOnInit(): void {
+    this.searchs('tharcissie');
   }
 
 }
